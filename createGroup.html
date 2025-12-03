@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your Study Group</title>
+    <link rel="stylesheet" href="createGroup.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="modal-card">
+            <header class="modal-header">
+                <button class="close-btn" aria-label="Close">×</button>
+                <div class="logo-badge">
+                    <div class="logo-circle">
+                        <img src="images/Logo.png" alt="Logo">
+                    </div>
+                    <span class="logo-text">Study Group</span>
+                </div>
+                <h1 class="title">Create Your Study Group</h1>
+                <p class="subtitle">Build a community and achieve academic excellence together</p>
+
+                <div class="steps">
+                    <div class="step active">
+                        <span>1</span>
+                        <p>Basic info</p>
+                    </div>
+                    <div class="step">
+                        <span>2</span>
+                        <p>Schedule</p>
+                    </div>
+                    <div class="step">
+                        <span>3</span>
+                        <p>Members</p>
+                    </div>
+                </div>
+            </header>
+
+            <main class="modal-body">
+                <!-- Basic Information -->
+                <section class="card-section">
+                    <div class="section-header">
+                        <span class="section-icon"></span>
+                        <h2>Basic Information</h2>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="group-name">Group Name*</label>
+                            <input id="group-name" type="text" placeholder="e.g. Data Structures Champions">
+                        </div>
+                        <div class="field-group">
+                            <label for="course">Course/Subject*</label>
+                            <input id="course" type="text" placeholder="e.g. CS 202 - Data Structures">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="3"
+                            placeholder="Tell us about your group goals, study plans, and what topics you'll cover..."></textarea>
+                    </div>
+                </section>
+
+                <!-- Study Schedule -->
+                <section class="card-section">
+                    <div class="section-header">
+                        <span class="section-icon"></span>
+                        <h2>Study Schedule</h2>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Preferred Meeting Time*</label>
+                        <div class="time-options">
+                            <button class="time-card">
+                                <span class="time-icon morning"></span>
+                                <div class="time-text">
+                                    <strong>Morning</strong>
+                                    <span>8:00 AM - 10:00 AM</span>
+                                </div>
+                            </button>
+                            <button class="time-card">
+                                <span class="time-icon afternoon"></span>
+                                <div class="time-text">
+                                    <strong>Afternoon</strong>
+                                    <span>2:00 PM - 5:00 PM</span>
+                                </div>
+                            </button>
+                            <button class="time-card">
+                                <span class="time-icon evening"></span>
+                                <div class="time-text">
+                                    <strong>Evening</strong>
+                                    <span>5:00 PM - 9:00 PM</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="field-row days-members">
+                        <div class="field-group">
+                            <label>Meeting Days</label>
+                            <div class="days-grid">
+                                <button class="day-chip">Mon</button>
+                                <button class="day-chip">Tue</button>
+                                <button class="day-chip">Wed</button>
+                                <button class="day-chip">Thu</button>
+                                <button class="day-chip">Fri</button>
+                                <button class="day-chip">Sat</button>
+                                <button class="day-chip">Sun</button>
+                            </div>
+                        </div>
+
+                        <div class="field-group members-group">
+                            <label>Maximum Members</label>
+                            <div class="slider-row">
+                                <input type="range" min="2" max="10" value="7">
+                                <span class="slider-value">7</span>
+                            </div>
+                            <small>Select between 2–7 members for your group</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Build Your Team -->
+                <section class="card-section">
+                    <div class="section-header">
+                        <span class="section-icon"></span>
+                        <h2>Build Your Team</h2>
+                    </div>
+
+                    <div class="members-bar">
+                        <div class="members-info">
+                            <strong>Total Members: 1/7</strong>
+                            <span>Invite at least 1 more member to get started</span>
+                        </div>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="email">Invite by email</label>
+                            <input id="email" type="email" placeholder="student-ugr-xxxx-xx@campus.edu">
+                        </div>
+                        <button class="btn btn-outline">Add</button>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="modal-footer">
+                <button class="btn btn-secondary">Back to Dashboard</button>
+                <button class="btn btn-primary">Create Group</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
