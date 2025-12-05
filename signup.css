@@ -1,6 +1,6 @@
 /* Useful for later uses in this file*/
 :root{
---bg:#EFE0C8; /* Page background */
+--bg:#EFE0C8; 
 --panel:#FBF7F3; 
 --accent:#E68F21; 
 --dark:#2b2929;
@@ -174,7 +174,7 @@ label input::placeholder {
   transition: all 0.2s ease;
 }
 .create:hover{
-  box-shadow: 0 12px 30px rgba(23,35,45,0.25); /* bigger shadow for pop-out */
+  box-shadow: 0 12px 30px rgba(23,35,45,0.25); 
   transform: translateY(-3px) scale(1.03);
 }
 
