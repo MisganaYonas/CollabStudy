@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <title>
+    CollabStudy Registration Page
+  </title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="general.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="page-bg">
+    <!-- The whole sign up form -->
+    <div class="modal">
+      <!-- The close button of the form -->
+      <button class="close">
+        <a href="index.html">
+        <svg class="close-sign" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </a>
+    </button>
+
+      <!-- The logo and the title of the form-->
+      <div class="brand">
+          <img class="logo" src="All images/logo.png">
+        <h1 class="title">Create Account</h1>
+        <p class="subtitle">Join the CollabStudy community</p>
+      </div>
+
+      <!-- The upload profile picture option -->
+      <div class="photo-area">
+        <div class="photo-circle">Photo</div>
+        <button class="upload">Upload Photo (Optional)</button>
+      </div>
+
+      <!-- The registration form where the user submit all the input details -->
+      <form class="reg-form" autocomplete="off">
+        <label>Username
+          <input type="text" placeholder="Enter your username">
+        </label>
+
+        <label>AAU Email
+          <input type="email" placeholder="name.ugr-xxxx-xx@aau.edu.et">
+        </label>
+
+        <label>Password
+          <input type="password" placeholder="Create a password">
+        </label>
+
+        <label>Confirm Password
+          <input type="password" placeholder="Confirm your password">
+        </label>
+
+        <label>Major or Department
+          <input type="text" placeholder="e.g., Computer Science, Software Engineering">
+        </label>
+
+        <label>Year
+          <select>
+            <option selected disabled>Select your year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+            <option>5th Year</option>
+            <option>Graduate</option>
+          </select>
+        </label>
+
+        <!-- The create account button -->
+        <button class="create">Create Account</button>
+      </form>
+
+      <!-- The or line -->
+      <div class="or-line"> <span>or</span> </div>
+
+      <!-- The login page link -->
+      <p class="login_foot">Already have an account? <a class="login-link" href="login.html">Log In</a></p>
+      <!-- The contact page link -->
+      <p class="help">Need help? <a class="contact-us" href="#">Contact Us</a></p>
+    </div>
+  </div>
+</body>
+</html>

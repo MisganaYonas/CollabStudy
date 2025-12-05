@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>
+    CollabStudy Login Page
+  </title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="general.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page background -->
+  <div class="page-bg">
+    <main class="page-content">
+      <article class="login-card" role="region" aria-label="login form">
+
+        <!-- Close button top-right of the login page -->
+        <button class="close-btn" aria-label="Close">
+          <a href="index.html">
+          <svg class="close-sign" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+          </a>
+        </button>
+
+        <!-- Logo area -->
+        <div class="logo-wrap" aria-hidden="true">
+            <img class="logo-circle" src="All images/logo.png">
+        </div>
+
+        <!-- Title -->
+        <h1 class="title">Welcome Back</h1>
+        <p class="subtitle">
+          Log in to continue your study journey
+        </p>
+
+        <!-- Form -->
+        <form class="login-form">
+
+          <!-- Email section -->
+          <div class="input-group">
+            <label for="email">AAU Email</label>
+            <div class="input-inner">
+              <svg class="icon icon-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+
+              <input id="email" name="email" type="email"
+                     placeholder="name.ugr-xxxx-xx@aau.edu.et" autocomplete="email" required>
+            </div>
+          </div>
+
+          <!-- Password section -->
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-inner">
+              <svg class="icon icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+
+              <input id="password" name="password" type="password"
+                     placeholder="Enter your password" autocomplete="current-password" required>
+            </div>
+          </div>
+
+          <!-- Login button -->
+          <div class="login">
+            <button type="submit" class="btn-login">Login</button>
+          </div>
+
+          <!-- Forgot password section -->
+          <p class="forgot">Forgot password?</p>
+
+          <!-- Divider section for the "or" part -->
+          <div class="divider"><span>or</span></div>
+
+          <!-- Signup section for users without accounts -->
+          <p class="signup-line">
+            Don't have an account?
+            <a href="signup.html" class="signup-link">Sign Up</a>
+          </p>
+
+        </form>
+
+      </article>
+    </main>
+  </div>
+
+</body>
+</html>
