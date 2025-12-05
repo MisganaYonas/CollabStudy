@@ -101,3 +101,15 @@ body {
     margin-left: 10px;
     background: #3f6a6c;
     border-radius: 10px;
+}
+
+.hint {
+    font-family: "Lora", serif;
+}
+
+.svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+    padding:10px;
+}

@@ -14,12 +14,26 @@ body {
 .header {
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 100;
+    width: 100%;
     background-color: rgb(244, 232, 210);
     padding: 16px 24px;
+    box-sizing: border-box;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
 }
 
 .logo-container .logo {
@@ -30,15 +44,14 @@ body {
 }
 
 
-.nav-links {
+.nav {
     display: flex;
     align-items: center;
     gap: 32px;
-    margin-left: 1120px;
    
 }
 
-.nav-links a {
+.nav a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     color: rgb(31, 44, 58);
@@ -46,7 +59,7 @@ body {
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav a:hover {
     color: rgb(60, 110, 113);
 }
 
@@ -440,6 +453,8 @@ body {
     padding-left: 24px;
     padding-right: 24px;
     max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .how-main {
@@ -526,14 +541,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    text-align: center;
 }
 
-.contact-title {
+.contact-subtitle {
     margin-bottom: 16px;
     font-family: Lora, serif;
     color: rgb(138, 79, 50);
     font-weight: 600;
     text-align: center;
+    font-size: 48px;
 }
 
 .contact-content {
@@ -570,12 +587,16 @@ body {
     border-radius: 16px;
 }
 
+.contact-svg svg {
+    stroke: rgb(60, 110, 113);
+    width: 32px;
+}
+
 .contact-subsection-title {
     margin-bottom: 12px;
     font-family: Lora, serif;
     color: rgb(138, 79, 50);
     font-weight: 600;
-    font-size: 20px;
 }
 
 .contact-subsection-content {
@@ -599,8 +620,9 @@ body {
 
 
 .comments-section {
-    padding: 64px 24px;
-    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: rgb(239, 231, 223);
     text-align: center;
 }
 
@@ -609,47 +631,89 @@ body {
     margin: 0 auto;
 }
 
+.comments-subtitle {
+    text-align: center;
+    font-family: "Lora", serif;
+    color: rgb(138, 79, 50);
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 64px;
+}
+
 .comments-subsection {
-    margin-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    background-color: rgb(229, 221, 211);
+    opacity: 1;
+    transform: none;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
 
 .comments-quotation {
-    font-size: 32px;
-    color: rgb(60, 110, 113);
+    font-family: "Playfair Display";
+    color: rgb(229, 143, 42);
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.7;
+    margin-bottom: 16px;
+
+}
+
+.comments-subsection.content {
+    font-family: "Poppins", sans-serif;
+    color: rgb(31, 44, 58);
+    font-weight: 300;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 24px;
+
 }
 
 .comments-subsection-name {
-    font-weight: bold;
+    font-family: "Lora", serif;
+    color: rgb(138, 79, 50);
+    font-weight: 200;
 }
 
 .comments-subsection-major {
+    font-family: "Poppins", sans-serif;
     color: rgb(60, 110, 113);
+    font-weight: 400;
+    font-size: 14px;
 }
 
 
 .data-section {
     display: flex;
     justify-content: center;
-    gap: 64px;
+    gap: 120px;
     padding: 64px 24px;
-    background-color: rgb(244, 232, 210);
+    background-color: rgb(31, 44, 58);
+    align-items: center;
 }
 
 .data-container {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .data-number {
-    font-size: 32px;
-    font-weight: bold;
+    font-family: Lora, serif;
+    color: rgb(229, 143, 42);
+    font-weight: 600;
+    font-size: 56px;
+    padding-bottom: 12px;
 }
 
 .data-catagory {
-    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: rgb(244, 232, 210);
+    font-weight: 300;
 }
 
 
@@ -660,20 +724,38 @@ body {
     text-align: center;
 }
 
+.getstared-subtitle {
+    font-family: "Lora", serif;
+    color: rgb(244, 232, 210);
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+
+.getstared-content {
+    margin-bottom: 32px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgb(244, 232, 210);
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+}
+
 .getstared-btn {
     margin-top: 16px;
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    background-color: rgb(244, 232, 210);
-    color: rgb(60, 110, 113);
+    background-color: rgb(229, 143, 42);
+    color: white;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
     transition: background-color 0.2s;
 }
 
 .getstared-btn:hover {
-    background-color: rgb(138, 79, 50);
+    background-color: rgb(1, 79, 50);
     color: white;
 }
 
@@ -705,6 +787,13 @@ body {
     min-width: 200px;
 }
 
+.footer-subsection-title {
+    font-family: "Lora", serif;
+    color: rgb(229, 143, 42);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
 .footer-list li {
     list-style: none;
     margin: 8px 0;
@@ -721,4 +810,90 @@ body {
 
 .footer-subsection-content {
     margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links a, .nav-login-btn {
+        font-size: 14px;
+    }
+
+    .hero-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        max-width: 90%;
+    }
+
+    .what-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-grid {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .contact-main {
+        margin-bottom: 32px;
+    }
+
+    .comments-subsection {
+        margin-bottom: 48px;
+    }
+
+    .data-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .data-number {
+        font-size: 48px;
+    }
+
+    .data-catagory {
+        font-size: 16px;
+    }
+
+    .data-container {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
