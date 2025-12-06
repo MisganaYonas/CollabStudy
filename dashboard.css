@@ -142,13 +142,14 @@ html,body{
   border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: #2f6e6b;
 }
 
 .header-link-icon {
   color: var(--teal);
   flex-shrink: 0;
   transition: color 0.3s ease;
-  stroke: currentColor;
+  stroke: #2f6e6b;
 }
 
 .header-link:hover {
