@@ -148,6 +148,7 @@ html,body{
   color: var(--teal);
   flex-shrink: 0;
   transition: color 0.3s ease;
+  stroke: currentColor;
 }
 
 .header-link:hover {
