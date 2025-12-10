@@ -481,14 +481,21 @@ body {
 .how-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-tempelate-columns: repeat(4, 1fr);
     gap: 32px;
     align-items: center;
     margin-left: 120px;
+    align-items: stretch;
+    margin-left: 0;
 }
 
 .how-subsection {
     background-color: rgb(244, 232, 210);
     margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
 }
 
 .how-svg {
@@ -544,6 +551,13 @@ body {
     text-align: center;
 }
 
+.contact-container > .container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
 .contact-subtitle {
     margin-bottom: 16px;
     font-family: Lora, serif;
@@ -572,8 +586,9 @@ body {
 }
 
 .contact-main {
-    grid-column: 1;
+    grid-column: 1 / -1;
     margin-bottom: 64px;
+    text-align: center;
 }
 
 .contact-svg {
