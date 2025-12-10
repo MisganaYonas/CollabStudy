@@ -479,24 +479,51 @@ body {
 }
 
 .how-grid {
+<<<<<<< HEAD
     display: grid;
     grid-tempelate-columns: repeat(4, 1fr);
     gap: 32px;
     align-items: stretch;
     margin-left: 0;
+=======
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+>>>>>>> c31b23d (fix: center contact heading; equalize how-step heights and spacing)
 }
 
 .how-subsection {
     background-color: rgb(244, 232, 210);
+<<<<<<< HEAD
     margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     padding: 32px;
     border-radius: 16px;
+=======
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 24px;
+}
+
+.how-number {
+    font-family: Lora, serif;
+    color: rgb(229, 143, 42);
+    font-weight: 700;
+    opacity: 0.3;
+    font-size: 96px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-right: 8px;
+>>>>>>> c31b23d (fix: center contact heading; equalize how-step heights and spacing)
 }
 
 .how-svg {
-    margin-bottom: 24px;
     background-color: rgb(60, 110, 113);
     border-radius: 50%;
     justify-content: center;
@@ -505,15 +532,13 @@ body {
     height: 64px;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
+    margin-top: 8px;
 }
 
-.how-number {
-    font-family: Lora, serif;
-    color: rgb(229, 143, 42);
-    font-weight: 700;
-    opacity: 0.3;
-    transform: none;
-    font-size: 72px;
+.how-text-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .how-subsection-title {
@@ -572,7 +597,7 @@ body {
 }
 
 .contact-subsection {
-    margin: 24px 0;
+    margin: 0;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 32px;
@@ -580,6 +605,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-main {
@@ -595,13 +623,14 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
-    background: rgba(138, 79, 50, 0.08);
-    border-radius: 16px;
+    background-color: rgb(229, 143, 42);
+    border-radius: 50%;
 }
 
 .contact-svg svg {
-    stroke: rgb(60, 110, 113);
+    stroke: rgb(255, 255, 255);
     width: 32px;
+    height: 32px;
 }
 
 .contact-subsection-title {
@@ -628,6 +657,13 @@ body {
 
 .contact-subsection-link:hover {
     text-decoration: underline;
+}
+
+.contact-office-hours {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 48px;
+    font-size: 18px;
 }
 
 
@@ -868,8 +904,29 @@ body {
     }
 
     .how-grid {
+        gap: 24px;
+    }
+
+    .how-subsection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .how-number {
+        font-size: 72px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .how-svg {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .contact-container > .container {
         grid-template-columns: 1fr;
-        margin-left: 0;
     }
 
     .contact-container {
