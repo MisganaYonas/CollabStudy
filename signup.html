@@ -5,13 +5,13 @@
   <title>
     CollabStudy Registration Page
   </title>
-  <link rel="stylesheet" href="signup.css">
-  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="css\signup.css">
+  <link rel="stylesheet" href="css\general.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,1
+  <link rel="preconnect" href="https://fonts.googleapis.com" n>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
@@ -45,29 +45,29 @@
       </div>
 
       <!-- The registration form where the user submit all the input details -->
-      <form class="reg-form" autocomplete="off" action="login.html" method="get">
+      <form class="reg-form" id="signupForm" autocomplete="off" >
         <label>Username
-          <input type="text" placeholder="Enter your username" required>
+          <input type="text"  id="username" placeholder="Enter your username" required>
         </label>
 
         <label>AAU Email
-          <input type="email" placeholder="name.ugr-xxxx-xx@aau.edu.et" required>
+          <input type="email" id="email" placeholder="name.ugr-xxxx-xx@aau.edu.et" required>
         </label>
 
         <label>Password
-          <input type="password" placeholder="Create a password" required>
+          <input type="password" id="password" placeholder="Create a password" required>
         </label>
 
         <label>Confirm Password
-          <input type="password" placeholder="Confirm your password" required>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
         </label>
 
         <label>Major or Department
-          <input type="text" placeholder="e.g., Computer Science, Software Engineering" required>
+          <input type="text" id="department" placeholder="e.g., Computer Science, Software Engineering" required>
         </label>
 
         <label>Year
-          <select required>
+          <select id="year" required>
             <option value="" selected disabled>Select your year</option>
             <option>1st Year</option>
             <option>2nd Year</option>
@@ -79,6 +79,7 @@
         </label>
 
         <!-- The create account button -->
+         <p id="formMessage" class="form-message"></p>
         <button type="submit" class="create">Create Account</button>
       </form>
 
@@ -91,6 +92,7 @@
       <p class="help">Need help? <a class="contact-us" href="#">Contact Us</a></p>
     </div>
   </div>
+  <script src="js/signup.js"></script>
 </body>
 </html>
 

@@ -43,6 +43,14 @@ body {
     margin-left: 24px;
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 .nav {
     display: flex;
@@ -418,29 +426,45 @@ body {
 }
 
 .why-subsection-content1 {
-    background-image: url("images/SmartGroupSearch.png");
+    background-image: url("../images/SmartGroupSearch.png");
 }
 
 .why-subsection-content2 {
-    background-image: url("images/CreateCustomGroups.png");
+    background-image: url("../images/CreateCustomGroups.png");
 }
 
 .why-subsection-content3 {
-    background-image: url("images/VerifiedStudnetsOnly.png");
+    background-image: url("../images/VerifiedStudnetsOnly.png");
 }
 
 .why-subsection-content4 {
-    background-image: url("images/GroupChatAndAIHelp.png");
+    background-image: url("../images/GroupChatAndAIHelp.png");
 }
 
 .why-subsection-content5 {
-    background-image: url("images/ShareResources.png");
+    background-image: url("../images/ShareResources.png");
 }
 
 .why-subsection-content6 {
-    background-image: url("images/RateYourGroups.png");
+    background-image: url("../images/RateYourGroups.png");
 }
 
+.why-subsection {
+    opacity: 0;
+    transform: translate(50px);
+    transition: opacity 0.8 ease, transform 0.8 ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-subsection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.why-subsection:hover {
+    transform: translate(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 
 
 .how-section {
@@ -479,48 +503,20 @@ body {
 }
 
 .how-grid {
-<<<<<<< HEAD
     display: grid;
-    grid-tempelate-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     align-items: stretch;
     margin-left: 0;
-=======
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    max-width: 1100px;
-    margin: 0 auto;
->>>>>>> c31b23d (fix: center contact heading; equalize how-step heights and spacing)
 }
 
 .how-subsection {
     background-color: rgb(244, 232, 210);
-<<<<<<< HEAD
     margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     padding: 32px;
     border-radius: 16px;
-=======
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 32px;
-    border-radius: 16px;
-    gap: 24px;
-}
-
-.how-number {
-    font-family: Lora, serif;
-    color: rgb(229, 143, 42);
-    font-weight: 700;
-    opacity: 0.3;
-    font-size: 96px;
-    line-height: 1;
-    flex-shrink: 0;
-    margin-right: 8px;
->>>>>>> c31b23d (fix: center contact heading; equalize how-step heights and spacing)
 }
 
 .how-svg {
@@ -868,13 +864,38 @@ body {
         padding: 12px;
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 16px;
+        display: none;
+        background-color: rgb(244, 232, 210);
+        position: absolute;
+        top: 70px;
+        right: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
     .nav-links {
         justify-content: center;
         width: 100%;
     }
 
-    .nav-links a, .nav-login-btn {
+    .nav-login-btn {
         font-size: 14px;
+        margin: 16px 0 0 0;
     }
 
     .hero-container {

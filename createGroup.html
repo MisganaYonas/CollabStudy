@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Your Study Group</title>
-    <link rel="stylesheet" href="createGroup.css">
-    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="css/createGroup.css">
+    <link rel="stylesheet" href="css/general.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/createGroup.css">
 </head>
 
 <body>
@@ -87,21 +87,21 @@
                     <div class="field-group">
                         <label>Preferred Meeting Time*</label>
                         <div class="time-options">
-                            <button class="time-card">
+                            <button class="time-card" aria-label="Morning 8:00 AM - 10:00 AM">
                                 <span class="time-icon morning"></span>
                                 <div class="time-text">
                                     <strong>Morning</strong>
                                     <span>8:00 AM - 10:00 AM</span>
                                 </div>
                             </button>
-                            <button class="time-card">
+                            <button class="time-card" aria-label="Afternoon 2:00 PM - 5:00 PM">
                                 <span class="time-icon afternoon"></span>
                                 <div class="time-text">
                                     <strong>Afternoon</strong>
                                     <span>2:00 PM - 5:00 PM</span>
                                 </div>
                             </button>
-                            <button class="time-card">
+                            <button class="time-card" aria-label="Evening 5:00 PM - 9:00 PM">
                                 <span class="time-icon evening"></span>
                                 <div class="time-text">
                                     <strong>Evening</strong>
@@ -115,20 +115,20 @@
                         <div class="field-group">
                             <label>Meeting Days</label>
                             <div class="days-grid">
-                                <button class="day-chip">Mon</button>
-                                <button class="day-chip">Tue</button>
-                                <button class="day-chip">Wed</button>
-                                <button class="day-chip">Thu</button>
-                                <button class="day-chip">Fri</button>
-                                <button class="day-chip">Sat</button>
-                                <button class="day-chip">Sun</button>
+                                <button class="day-chip" aria-label="Monday">Mon</button>
+                                <button class="day-chip" aria-label="Tuesday">Tue</button>
+                                <button class="day-chip" aria-label="Wednesday">Wed</button>
+                                <button class="day-chip" aria-label="Thursday">Thu</button>
+                                <button class="day-chip" aria-label="Friday">Fri</button>
+                                <button class="day-chip" aria-label="Saturday">Sat</button>
+                                <button class="day-chip" aria-label="Sunday">Sun</button>
                             </div>
                         </div>
 
                         <div class="field-group members-group">
                             <label>Maximum Members</label>
                             <div class="slider-row">
-                                <input type="range" min="2" max="10" value="7">
+                                <input type="range" min="2" max="10" value="7" aria-label="Maximum Members">
                                 <span class="slider-value">7</span>
                             </div>
                             <small>Select between 2–7 members for your group</small>
@@ -168,6 +168,7 @@
             </footer>
         </div>
     </div>
+    <script src="js/createGroup.js"></script>
 </body>
 
 </html>

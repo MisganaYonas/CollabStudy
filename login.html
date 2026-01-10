@@ -5,20 +5,15 @@
   <title>
     CollabStudy Login Page
   </title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="css\login.css">
+  <link rel="stylesheet" href="css\general.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Page background -->
-  <div class="page-bg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,90
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,1
     <main class="page-content">
       <article class="login-card" role="region" aria-label="login form">
 
@@ -45,8 +40,7 @@
         </p>
 
         <!-- Form -->
-        <form class="login-form" action="dashboard.html" method="get">
-
+        <form class="login-form" id="loginForm" action="dashboard.html" method="get">
           <!-- Email section -->
           <div class="input-group">
             <label for="email">AAU Email</label>
@@ -75,6 +69,7 @@
             </div>
           </div>
 
+          <p id="loginMessage"></p>
           <!-- Login button -->
           <div class="login">
             <button type="submit" class="btn-login">Login</button>
@@ -97,7 +92,7 @@
       </article>
     </main>
   </div>
-
+  <script src="js\login.js"></script>
 </body>
 </html>
 
