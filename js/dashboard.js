@@ -1,13 +1,21 @@
 console.log("Dashboard loaded");
 
-const menuIcon = document.querySelector(".menu-icon");
+const menuBtn = document.querySelector(".menu-icon");
 const profileArea = document.querySelector(".profile-area");
 
-if (menuIcon && profileArea) {
-  menuIcon.addEventListener("click", () => {
-    profileArea.classList.toggle("active");
-  });
-}
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  profileArea.classList.toggle("active");
+});
+
+document.addEventListener("click", () => {
+  profileArea.classList.remove("active");
+});
+
+profileArea.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+});
+
 
 document.querySelectorAll(".group-btn.join").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -29,3 +37,9 @@ if (logoutLink) {
     window.location.href = "index.html";
   });
 };
+
+function toggleGroup(el){
+  const card = el.closest(".group-card");
+  card.classList.toggle("active");
+};
+
