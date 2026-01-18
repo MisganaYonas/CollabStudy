@@ -131,13 +131,27 @@ body{
 }
 
 .info-value {
-  color: #2a2a2a;
+  border: none;
+  background: transparent;
   font-size: 16px;
   font-weight: 500;
+  color: #2a2a2a;
   margin-left: 26px;
+  outline: none;
+  width: calc(100% - 26px);
 }
 
-/* The edit profile button */
+.info-value[readonly] {
+  cursor: default;
+}
+
+.info-value:not([readonly]) {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
 .edit-profile-btn {
   display: inline-flex;
   align-items: center;

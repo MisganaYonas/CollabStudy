@@ -43,7 +43,7 @@
             </svg>
             <span>Username</span>
           </div>
-          <div class="info-value">username</div>
+          <input class="info-value" type="text" value="username" readonly>
         </div>
 
         <!-- Email -->
@@ -55,7 +55,7 @@
             </svg>
             <span>Email</span>
           </div>
-          <div class="info-value">test.ugr-9470-16@aau.edu.et</div>
+          <input class="info-value" type="email" value="test.ugr-9470-16@aau.edu.et" readonly>
         </div>
 
         <!-- Major -->
@@ -67,7 +67,7 @@
             </svg>
             <span>Major</span>
           </div>
-          <div class="info-value">Software Engineering</div>
+          <input class="info-value" type="text" value="Software Engineering" readonly>
         </div>
 
         <!-- Year -->
@@ -81,7 +81,7 @@
             </svg>
             <span>Year</span>
           </div>
-          <div class="info-value">3rd Year</div>
+          <input class="info-value" type="text" value="3rd Year" readonly>
         </div>
 
         <!-- Bio -->
@@ -93,17 +93,17 @@
             </svg>
             <span>Bio</span>
           </div>
-          <div class="info-value">No bio added yet.</div>
+          <textarea class="info-value" rows="3" readonly>No bio added yet.</textarea>
         </div>
 
         <!-- The edit Profile Button -->
-        <a href="editProfile.html" class="edit-profile-btn">
+        <div class="edit-profile-btn">
           <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
           </svg>
           <span>Edit Profile</span>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -135,6 +135,7 @@
     </a>
   </div>
 
+  <script src="js/myProfile.js"></script>
 </body>
 </html>
 

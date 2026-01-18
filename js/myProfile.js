@@ -7,10 +7,30 @@ if (closeBtn) {
 }
 
 const editProfileBtn = document.querySelector(".edit-profile-btn");
+const fields = document.querySelectorAll(".info-value");
+
+let editing = false;
+
 if (editProfileBtn) {
   editProfileBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    alert("Edit Profile functionality is not implemented yet.");
+    editing = !editing;
+
+    fields.forEach(field => {
+      if (editing) {
+        field.removeAttribute("readonly");
+      } else {
+        field.setAttribute("readonly", true);
+      }
+    });
+
+    editProfileBtn.querySelector("span").textContent = editing
+      ? "Save Profile"
+      : "Edit Profile";
+
+    if (!editing) {
+      alert("Profile saved (placeholder).");
+    }
   });
 }
 
