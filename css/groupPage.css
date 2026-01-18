@@ -38,10 +38,54 @@ body{
   z-index: 10;
 }
 
-.header-right {
+.header-right{
+  position:relative;
+}
+
+.menu-dropdown{
+  min-width: 220px;
+  position:absolute;
+  top:50px;
+  right:0;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.12);
+  padding:10px;
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  z-index:20;
+}
+
+.header-right.active .menu-dropdown{
+  display:flex;
+}
+
+.menu-item{
+  white-space: nowrap;   
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  background:none;
+  border:none;
+  padding:10px 14px;
+  text-align:left;
+  font-size:14px;
+  cursor:pointer;
+  border-radius:8px;
+  color:#2f4b4a;
+}
+
+.menu-item:hover{
+  background:rgba(47,107,102,0.1);
+}
+
+#leaveGroupBtn{
+  color:var(--orange);
+}
+
+#leaveGroupBtn:hover{
+  background:rgba(217,133,31,0.15);
 }
 
 .header-left {

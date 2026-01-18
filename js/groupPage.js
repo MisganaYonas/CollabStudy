@@ -2,8 +2,34 @@ const hamburger = document.querySelector(".hamburger-menu");
 const headerRight = document.querySelector(".header-right");
 
 if (hamburger && headerRight) {
-  hamburger.addEventListener("click", () => {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
     headerRight.classList.toggle("active");
+  });
+
+  document.addEventListener("click", () => {
+    headerRight.classList.remove("active");
+  });
+
+  headerRight.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+}
+
+const backBtn = document.getElementById("backDashboardBtn");
+const leaveBtn = document.getElementById("leaveGroupBtn");
+
+if (backBtn) {
+  backBtn.addEventListener("click", () => {
+    window.location.href = "dashboard.html";
+  });
+}
+
+if (leaveBtn) {
+  leaveBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to leave this group?")) {
+      window.location.href = "dashboard.html";
+    }
   });
 }
 
@@ -30,7 +56,6 @@ if (sendBtn && messageInput && messagesArea) {
 
     messagesArea.appendChild(msgDiv);
     messagesArea.scrollTop = messagesArea.scrollHeight;
-
     messageInput.value = "";
   });
 
@@ -39,13 +64,5 @@ if (sendBtn && messageInput && messagesArea) {
       e.preventDefault();
       sendBtn.click();
     }
-  });
-}
-
-const dashboardLink = document.querySelector(".header-link-home");
-if (dashboardLink) {
-  dashboardLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.location.href = "dashboard.html";
   });
 }
