@@ -1,5 +1,9 @@
 const hamburger = document.querySelector(".hamburger-menu");
 const headerRight = document.querySelector(".header-right");
+const groupSidebar = document.getElementById("groupSidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+const groupIcon = document.querySelector(".group-icon");
+const groupName = document.querySelector(".group-name");
 
 if (hamburger && headerRight) {
   hamburger.addEventListener("click", (e) => {
@@ -66,3 +70,61 @@ if (sendBtn && messageInput && messagesArea) {
     }
   });
 }
+
+[groupIcon, groupName].forEach(el => {
+  el.addEventListener("click", () => {
+    groupSidebar.classList.add("active");
+  });
+});
+
+closeSidebar.addEventListener("click", () => {
+  groupSidebar.classList.remove("active");
+});
+
+// Star rating logic
+const stars = document.querySelectorAll(".star-rating .star");
+const ratingText = document.getElementById("ratingText");
+
+let currentRating = 0;
+
+stars.forEach(star => {
+  star.addEventListener("click", () => {
+    currentRating = Number(star.dataset.value);
+    updateStars(currentRating);
+    ratingText.innerHTML = `You rated this group <strong>${currentRating}</strong> stars`;
+  });
+
+  star.addEventListener("mouseover", () => {
+    updateStars(Number(star.dataset.value));
+  });
+
+  star.addEventListener("mouseout", () => {
+    updateStars(currentRating);
+  });
+});
+
+function updateStars(rating) {
+  stars.forEach(star => {
+    star.classList.toggle(
+      "filled",
+      Number(star.dataset.value) <= rating
+    );
+  });
+}
+// Close sidebar when clicking outside of it
+document.addEventListener("click", (e) => {
+  if (
+    groupSidebar.classList.contains("active") &&
+    !groupSidebar.contains(e.target) &&
+    !groupIcon.contains(e.target) &&
+    !groupName.contains(e.target)
+  ) {
+    groupSidebar.classList.remove("active");
+  }
+});
+
+// Prevent sidebar clicks from closing it
+groupSidebar.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+

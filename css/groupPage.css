@@ -432,3 +432,142 @@ body{
   }
 }
 
+.group-sidebar {
+  position: fixed;
+  left: -350px;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: #2F6B66;
+  color: white;
+  padding: 20px;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  z-index: 50;
+  overflow-y: auto;
+  font-family: "Inter", sans-serif;
+}
+
+.group-sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.close-sidebar {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 4px;
+}
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.member-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+
+.member-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.member-course {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+}
+
+.status.active {
+  background: var(--orange);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Star Rating (Exact Image Style) */
+.star-rating {
+  display: flex;
+  gap: 6px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.star-rating .star {
+  color: rgba(255, 255, 255, 0.4); /* empty stars */
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star-rating .star.filled {
+  color: var(--orange); /* filled stars */
+}
+
+.star-rating .star:hover {
+  transform: scale(1.1);
+}
+
+/* Rating text */
+.rating-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 49;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
