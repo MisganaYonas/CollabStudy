@@ -80,23 +80,27 @@ body{
   margin-top: 20px;
 }
 
-.profile-avatar {
+/* Profile avatar (generic user icon) */
+.profile-avatar.icon-avatar {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: var(--teal);
+  background: radial-gradient(
+    circle at top,
+    #3a3a3a,
+    #0f0f0f
+  );
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 32px;
-  box-shadow: 0 4px 16px rgba(47, 107, 102, 0.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.15),
+    0 8px 20px rgba(0,0,0,0.35);
 }
 
-.avatar-letter {
-  color: white;
-  font-size: 48px;
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
+.avatar-icon {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* All the profile information */
@@ -403,3 +407,14 @@ body{
   }
 }
 
+@media (max-width: 768px) {
+  .profile-avatar.icon-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
